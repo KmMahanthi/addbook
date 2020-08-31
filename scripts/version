@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+TAG=$(git describe --tags 2> /dev/null)
+if [ $? != 0 ]; then
+  TAG=$(git rev-parse --short HEAD)
+fi
+BUILD=$(git rev-list --count HEAD)
+TAGSTRING=$(echo $TAG | tr -d '\n')
+echo $TAG-$BUILD | tr -d '\n'

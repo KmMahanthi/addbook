@@ -1,0 +1,4 @@
+#!/bin/bash
+systemctl stop addbook.service
+systemctl disable addbook
+rm /etc/systemd/system/addbook.service

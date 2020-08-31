@@ -1,0 +1,6 @@
+-sname ${ADDBOOK_NODE_NAME}
+
+-setcookie addbook_cookie
+
++K true
++A30

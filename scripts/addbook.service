@@ -1,0 +1,22 @@
+[Unit]
+Description=An OTP application
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/profile.d/addbook_env.sh
+ExecStart=/opt/addbook/bin/addbook foreground
+ExecStop=/opt/addbook/bin/addbook stop
+Restart=always
+RestartSec=15
+StartLimitInterval=300
+StartLimitBurst=3
+User=addbook
+Group=addbook
+LimitAS=infinity
+LimitRSS=infinity
+LimitCORE=infinity
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

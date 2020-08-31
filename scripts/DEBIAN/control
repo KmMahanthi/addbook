@@ -1,0 +1,8 @@
+Package: addbook
+Version: 0.1
+Depends: libncurses5, openssl
+Section: base
+Priority: optional
+Architecture: amd64
+Maintainer: Mahanthi Kanakamedala <mahanthi.km@gmail.com>
+Description: An OTP application

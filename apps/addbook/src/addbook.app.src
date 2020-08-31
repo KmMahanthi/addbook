@@ -1,0 +1,15 @@
+{application, addbook,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {addbook_app, []}},
+  {applications,
+   [kernel
+   ,stdlib
+   ,lager
+   ,tivan
+   ,bifrost]},
+  {env,[]},
+  {modules, []},
+  {links, []}
+ ]}.

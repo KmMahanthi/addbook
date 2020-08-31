@@ -1,0 +1,11 @@
+#!/bin/bash
+getent passwd addbook > /dev/null 2&>1
+if [ $? -eq 0 ]; then
+  true
+else
+  adduser --quiet --disabled-password --gecos "An OTP application" addbook
+fi
+chown -R addbook.addbook /opt/addbook
+cp -n /opt/addbook/bin/addbook.service /etc/systemd/system/
+cp -n /opt/addbook/bin/addbook_env.sh /etc/profile.d/
+systemctl enable addbook
